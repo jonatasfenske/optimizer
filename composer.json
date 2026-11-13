@@ -1,0 +1,45 @@
+{
+    "name": "jonatasfenske/optimizer",
+    "description": "SEO e meta tags PHP 8.5 com Schema.org JSON-LD, Open Graph, Twitter Cards, Sitemap.xml e robots.txt generator",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["php85", "seo", "meta-tags", "open-graph", "twitter-cards", "schema-org", "json-ld", "sitemap"],
+    "homepage": "https://github.com/jonatasfenske/optimizer",
+    "authors": [
+        {
+            "name": "Robson V. Leite",
+            "email": "cursos@upinside.com.br",
+            "role": "Original Author"
+        },
+        {
+            "name": "Jonatas Fenske",
+            "role": "PHP 8.5 Modernization"
+        }
+    ],
+    "require": {
+        "php": ">=8.5",
+        "ext-simplexml": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JonatasFenske\\Optimizer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JonatasFenske\\Optimizer\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse src tests --level=max"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
