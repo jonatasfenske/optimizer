@@ -12,7 +12,7 @@ use DateTimeInterface;
  */
 class SitemapGenerator
 {
- /** @var array<int, array{loc: string, lastmod?: string, changefreq?: string, priority?: float}> */
+ /** @var array<int, array{loc: string, lastmod?: string, changefreq?: string, priority?: string}> */
  private array $urls = [];
 
  private string $baseUrl;

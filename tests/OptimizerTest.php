@@ -196,7 +196,6 @@ final class OptimizerTest extends TestCase
 
         $debug = $this->optimizer->debug();
 
-        self::assertIsArray($debug);
         self::assertNotEmpty($debug);
     }
 

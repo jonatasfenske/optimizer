@@ -10,6 +10,11 @@ use stdClass;
 /**
  * Classe base para geração de meta tags modernizada para PHP 8.5
  * Remove dependência de JetBrains\PhpStorm\Pure e adiciona tipagem estrita
+ *
+ * @property string $title
+ * @property string $description
+ * @property string $url
+ * @property string $image
  */
 class MetaTags
 {
@@ -38,12 +43,12 @@ class MetaTags
 
     public function __isset(string $name): bool
     {
-        return isset($this->data?->$name);
+        return isset($this->data->$name);
     }
 
     public function __get(string $name): mixed
     {
-        return $this->data?->$name ?? null;
+        return $this->data->$name ?? null;
     }
 
     /**
@@ -88,9 +93,7 @@ class MetaTags
 
         for ($this->meta->rewind(); $this->meta->valid(); $this->meta->next()) {
             $current = $this->meta->current();
-            if ($current !== false) {
-                $render .= $current->asXML();
-            }
+            $render .= $current->asXML();
         }
 
         return urldecode($render);
